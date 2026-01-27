@@ -53,7 +53,6 @@ jobs:
             --config ./configs \
             --since 01/01/2026 \
             --until 31/12/2026 \
-            --formats java md fxml \
             --timezone Asia/Singapore \
             --last-modified-date \
             --output reposense-report
