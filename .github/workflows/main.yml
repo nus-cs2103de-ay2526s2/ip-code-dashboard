@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "0 0 * * *"   # daily at 00:00 UTC
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,7 +13,6 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,7 +31,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python deps
-        run: pip install --upgrade pip requests
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
       - name: Download RepoSense
         run: |
@@ -43,12 +44,10 @@ jobs:
       - name: Generate RepoSense report
         run: |
           set -euxo pipefail
-
           rm -rf reposense-report
 
           java -version
 
-          # Run RepoSense (edit dates/formats as needed)
           java --add-opens java.base/java.time=ALL-UNNAMED -jar RepoSense.jar \
             --config ./configs \
             --since 01/01/2026 \
@@ -58,34 +57,30 @@ jobs:
             --last-modified-date \
             --output reposense-report
 
-          # Ensure Pages serves static files
+          # RepoSense sometimes outputs to reposense-report/reposense-report
+          if [ -d "reposense-report/reposense-report" ]; then
+            mv reposense-report/reposense-report/* reposense-report/
+            rm -rf reposense-report/reposense-report
+          fi
+
           touch reposense-report/.nojekyll
 
-          # Optional: set report title if summary.json exists
+          # Set report title if summary.json exists (no heredoc)
           if [ -f "reposense-report/summary.json" ]; then
-            python3 - <<'PY'
-            import json
-            p = "reposense-report/summary.json"
-            with open(p, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            data["reportTitle"] = "CS2103DE Software Engineering iP Code Dashboard"
-            with open(p, "w", encoding="utf-8") as f:
-                json.dump(data, f, ensure_ascii=False)
-            PY
-                      fi
-            
-                      echo "=== reposense-report contents ==="
-                      ls -la reposense-report
-                      test -f reposense-report/index.html
-                      test -f reposense-report/archive.zip
-            
-                  - name: Deploy to GitHub Pages (gh-pages branch)
-                    uses: peaceiris/actions-gh-pages@v3
-                    with:
-                      github_token: ${{ secrets.GITHUB_TOKEN }}
-                      publish_dir: ./reposense-report
-                      force_orphan: true
-                      enable_jekyll: false
-                      user_name: "github-actions[bot]"
-                      user_email: "github-actions[bot]@users.noreply.github.com"
-                      commit_message: "docs: update RepoSense report"
+            python3 -c "import json; p='reposense-report/summary.json'; d=json.load(open(p,'r',encoding='utf-8')); d['reportTitle']='CS2103DE Software Engineering iP Code Dashboard'; json.dump(d, open(p,'w',encoding='utf-8'), ensure_ascii=False)"
+          fi
+
+          echo "=== reposense-report contents ==="
+          ls -la reposense-report
+          test -f reposense-report/index.html
+
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reposense-report
+          force_orphan: true
+          enable_jekyll: false
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "docs: update RepoSense report"
