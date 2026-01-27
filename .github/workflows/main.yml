@@ -64,28 +64,28 @@ jobs:
           # Optional: set report title if summary.json exists
           if [ -f "reposense-report/summary.json" ]; then
             python3 - <<'PY'
-import json
-p = "reposense-report/summary.json"
-with open(p, "r", encoding="utf-8") as f:
-    data = json.load(f)
-data["reportTitle"] = "CS2103DE Software Engineering iP Code Dashboard"
-with open(p, "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False)
-PY
-          fi
-
-          echo "=== reposense-report contents ==="
-          ls -la reposense-report
-          test -f reposense-report/index.html
-          test -f reposense-report/archive.zip
-
-      - name: Deploy to GitHub Pages (gh-pages branch)
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reposense-report
-          force_orphan: true
-          enable_jekyll: false
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "docs: update RepoSense report"
+            import json
+            p = "reposense-report/summary.json"
+            with open(p, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            data["reportTitle"] = "CS2103DE Software Engineering iP Code Dashboard"
+            with open(p, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False)
+            PY
+                      fi
+            
+                      echo "=== reposense-report contents ==="
+                      ls -la reposense-report
+                      test -f reposense-report/index.html
+                      test -f reposense-report/archive.zip
+            
+                  - name: Deploy to GitHub Pages (gh-pages branch)
+                    uses: peaceiris/actions-gh-pages@v3
+                    with:
+                      github_token: ${{ secrets.GITHUB_TOKEN }}
+                      publish_dir: ./reposense-report
+                      force_orphan: true
+                      enable_jekyll: false
+                      user_name: "github-actions[bot]"
+                      user_email: "github-actions[bot]@users.noreply.github.com"
+                      commit_message: "docs: update RepoSense report"
