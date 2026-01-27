@@ -15,7 +15,7 @@ java --add-opens java.base/java.time=ALL-UNNAMED -jar RepoSense.jar \
     --config ./configs \
     --since 01/01/2026 \
     --until 31/12/2026 \
-    --formats "java md txt" \
+    --formats java md txt \
     --timezone UTC+08 \
     --output ./reposense-report
 
