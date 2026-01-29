@@ -1,0 +1,523 @@
+Jan 29, 2026 3:05:49 AM reposense.system.LogsManager addFileHandler
+INFO: Log temp folder has been successfully created
+Jan 29, 2026 3:05:50 AM reposense.parser.ReportConfigYamlParser parse
+INFO: Parsing report-config.yaml file...
+Jan 29, 2026 3:05:50 AM reposense.parser.ArgsParser addReportConfigToBuilder
+WARNING: Error parsing report-config.yaml: ./configs/report-config.yaml (No such file or directory)
+./configs/report-config.yaml Ignoring the report config provided.
+Jan 29, 2026 3:05:50 AM reposense.parser.CsvParser validateHeader
+INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
+Jan 29, 2026 3:05:50 AM reposense.git.GitConfig getGlobalGitLfsConfig
+WARNING: Could not get global git lfs config
+java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:23)
+	at reposense.git.GitConfig.getGitGlobalConfig(GitConfig.java:90)
+	at reposense.git.GitConfig.getGlobalGitLfsConfig(GitConfig.java:44)
+	at reposense.RepoSense.main(RepoSense.java:79)
+Caused by: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
+	... 3 more
+
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/PeterShanxin/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/LEDTOMATO/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/XMOKE2435/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/YeowChunSiang/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/PeterShanxin/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/XMOKE2435/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/YeowChunSiang/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/LEDTOMATO/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/XMOKE2435/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/LEDTOMATO/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/YeowChunSiang/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/PeterShanxin/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/jimmy-neu/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Zanedoesit/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/jimmy-neu/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Zanedoesit/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/weixuan01/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/manyag-25/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [2/25] Analyzing https://github.com/YeowChunSiang/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [4/25] Analyzing https://github.com/PeterShanxin/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/25] Analyzing https://github.com/XMOKE2435/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [3/25] Analyzing https://github.com/LEDTOMATO/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/weixuan01/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/manyag-25/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/XMOKE2435/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/XMOKE2435/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/YeowChunSiang/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/YeowChunSiang/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/LEDTOMATO/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/PeterShanxin/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/PeterShanxin/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/LEDTOMATO/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:50 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/YeowChunSiang/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/XMOKE2435/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/PeterShanxin/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/LEDTOMATO/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "manyag-25/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/manyag-25/ip.git' 'repos/manyag-25_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/manyag-25_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/pinkcar203/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/pinkcar203/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/XMOKE2435/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/XMOKE2435/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/LEDTOMATO/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/jimmy-neu/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/LEDTOMATO/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/ZiHeng0911/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/ZiHeng0911/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/weixuan01/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Zanedoesit/ip.git completed!
+Jan 29, 2026 3:05:50 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/YeowChunSiang/ip.git (master)...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Dia-R/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/cheranlee/ip.git...
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/cheranlee/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/XMOKE2435/ip.git (master) completed!
+Jan 29, 2026 3:05:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Dia-R/ip.git to complete...
+Jan 29, 2026 3:05:50 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [5/25] Analyzing https://github.com/jimmy-neu/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/YeowChunSiang/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/LEDTOMATO/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [6/25] Analyzing https://github.com/weixuan01/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/jimmy-neu/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/jimmy-neu/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/YeowChunSiang/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/jimmy-neu/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "ZiHeng0911/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/ZiHeng0911/ip.git' 'repos/ZiHeng0911_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/ZiHeng0911_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Astatyr/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Astatyr/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [7/25] Analyzing https://github.com/Zanedoesit/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/weixuan01/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/weixuan01/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/weixuan01/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Zanedoesit/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Zanedoesit/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/pinkcar203/ip.git completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/siaoarh/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/jimmy-neu/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/siaoarh/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Zanedoesit/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/jimmy-neu/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/jimmy-neu/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [8/25] Analyzing https://github.com/pinkcar203/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "Astatyr/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/Astatyr/ip.git' 'repos/Astatyr_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/Astatyr_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Pranav-Pudi/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/pinkcar203/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/pinkcar203/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Pranav-Pudi/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/pinkcar203/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/weixuan01/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Dia-R/ip.git completed!
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Zanedoesit/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "siaoarh/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/siaoarh/ip.git' 'repos/siaoarh_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/siaoarh_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/ashjwley03/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/TEC-wert11/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/ashjwley03/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/TEC-wert11/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/weixuan01/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Zanedoesit/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/cheranlee/ip.git completed!
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/weixuan01/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Gogeta2792/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Zanedoesit/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Gogeta2792/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [9/25] Analyzing https://github.com/Dia-R/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [10/25] Analyzing https://github.com/cheranlee/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "Pranav-Pudi/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/Pranav-Pudi/ip.git' 'repos/Pranav-Pudi_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/Pranav-Pudi_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Muzhou-exe/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/pinkcar203/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Muzhou-exe/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/pinkcar203/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/cheranlee/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/cheranlee/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/pinkcar203/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Dia-R/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Dia-R/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/cheranlee/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Dia-R/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "ashjwley03/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/ashjwley03/ip.git' 'repos/ashjwley03_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/ashjwley03_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/chucksupasi/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/PeterShanxin/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/chucksupasi/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "TEC-wert11/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/TEC-wert11/ip.git' 'repos/TEC-wert11_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/TEC-wert11_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/LingWL02/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/LingWL02/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/PeterShanxin/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "Muzhou-exe/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/Muzhou-exe/ip.git' 'repos/Muzhou-exe_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/Muzhou-exe_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/IV-pratibha-0912/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/IV-pratibha-0912/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Dia-R/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Dia-R/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Dia-R/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/cheranlee/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "chucksupasi/ip[master]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/chucksupasi/ip.git' 'repos/chucksupasi_ip/ip_bare' on path . :
+Cloning into bare repository 'repos/chucksupasi_ip/ip_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/WEIJIE-01/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/WEIJIE-01/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/cheranlee/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/PeterShanxin/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/cheranlee/ip.git (master) completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Gogeta2792/ip.git completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Yugam2508/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [11/25] Analyzing https://github.com/Gogeta2792/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Yugam2508/ip.git to complete...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Gogeta2792/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Gogeta2792/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:51 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Gogeta2792/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/LingWL02/ip.git completed!
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Ianos828/ip.git...
+Jan 29, 2026 3:05:51 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [12/25] Analyzing https://github.com/LingWL02/ip.git (master)...
+Jan 29, 2026 3:05:51 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Ianos828/ip.git to complete...
+Jan 29, 2026 3:05:52 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/IV-pratibha-0912/ip.git completed!
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/LingWL02/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/LingWL02/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [13/25] Analyzing https://github.com/IV-pratibha-0912/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepos
+WARNING: No authors found with commits for https://github.com/LingWL02/ip.git (master).
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Gogeta2792/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/IV-pratibha-0912/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/IV-pratibha-0912/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Gogeta2792/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Gogeta2792/ip.git (master) completed!
+Jan 29, 2026 3:05:52 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/IV-pratibha-0912/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/WEIJIE-01/ip.git completed!
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [14/25] Analyzing https://github.com/WEIJIE-01/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Yugam2508/ip.git completed!
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [15/25] Analyzing https://github.com/Yugam2508/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/IV-pratibha-0912/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/WEIJIE-01/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/WEIJIE-01/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:52 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/WEIJIE-01/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Yugam2508/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Yugam2508/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/IV-pratibha-0912/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Yugam2508/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/IV-pratibha-0912/ip.git (master) completed!
+Jan 29, 2026 3:05:52 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Ianos828/ip.git completed!
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [16/25] Analyzing https://github.com/Ianos828/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Yugam2508/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Ianos828/ip.git (master) does not contain a standalone config file.
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Ianos828/ip.git (master) has no authors specified, using all authors by default.
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/WEIJIE-01/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Ianos828/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Yugam2508/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Yugam2508/ip.git (master) completed!
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/WEIJIE-01/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/WEIJIE-01/ip.git (master) completed!
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Ianos828/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Ianos828/ip.git (master)...
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Ianos828/ip.git (master) completed!
+Jan 29, 2026 3:05:52 AM reposense.report.ReportGenerator generateReposReport
+INFO: The report is generated at /home/runner/work/ip-code-dashboard/ip-code-dashboard/reposense-report/reposense-report
+Jan 29, 2026 3:05:52 AM reposense.RepoSense main
+INFO: Elapsed processing time: 2.50 second(s)
