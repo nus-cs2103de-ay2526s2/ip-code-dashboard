@@ -1,0 +1,509 @@
+May 05, 2026 3:32:01 AM reposense.system.LogsManager addFileHandler
+INFO: Log temp folder has been successfully created
+May 05, 2026 3:32:02 AM reposense.parser.ReportConfigYamlParser parse
+INFO: Parsing report-config.yaml file...
+May 05, 2026 3:32:02 AM reposense.parser.ArgsParser addReportConfigToBuilder
+WARNING: Error parsing report-config.yaml: ./configs/report-config.yaml (No such file or directory)
+./configs/report-config.yaml Ignoring the report config provided.
+May 05, 2026 3:32:02 AM reposense.parser.CsvParser validateHeader
+INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
+May 05, 2026 3:32:02 AM reposense.git.GitConfig getGlobalGitLfsConfig
+WARNING: Could not get global git lfs config
+java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:23)
+	at reposense.git.GitConfig.getGitGlobalConfig(GitConfig.java:90)
+	at reposense.git.GitConfig.getGlobalGitLfsConfig(GitConfig.java:44)
+	at reposense.RepoSense.main(RepoSense.java:87)
+Caused by: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
+fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
+	... 3 more
+
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Pranav-Pudi/ip.git...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/PeterShanxin/ip.git...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/siaoarh/ip.git...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/LEDTOMATO/ip.git...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/PeterShanxin/ip.git to complete...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Pranav-Pudi/ip.git to complete...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/LEDTOMATO/ip.git to complete...
+May 05, 2026 3:32:02 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/siaoarh/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/siaoarh/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/XMOKE2435/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/24] Analyzing https://github.com/siaoarh/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/XMOKE2435/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/PeterShanxin/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/YeowChunSiang/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [2/24] Analyzing https://github.com/PeterShanxin/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/siaoarh/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/siaoarh/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/YeowChunSiang/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/siaoarh/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/PeterShanxin/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/PeterShanxin/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:03 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/PeterShanxin/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/LEDTOMATO/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/ashjwley03/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [3/24] Analyzing https://github.com/LEDTOMATO/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/ashjwley03/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/LEDTOMATO/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/LEDTOMATO/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:03 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/LEDTOMATO/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Pranav-Pudi/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/jimmy-neu/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [4/24] Analyzing https://github.com/Pranav-Pudi/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/jimmy-neu/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Pranav-Pudi/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:03 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Pranav-Pudi/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/YeowChunSiang/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Pranav-Pudi/ip.git (master)...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Zanedoesit/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Zanedoesit/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/XMOKE2435/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/ashjwley03/ip.git completed!
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/TEC-wert11/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/TEC-wert11/ip.git to complete...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Gogeta2792/ip.git...
+May 05, 2026 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Gogeta2792/ip.git to complete...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/jimmy-neu/ip.git completed!
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/weixuan01/ip.git...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/weixuan01/ip.git to complete...
+May 05, 2026 3:32:04 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/siaoarh/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/siaoarh/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/LEDTOMATO/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/LEDTOMATO/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Gogeta2792/ip.git completed!
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/TEC-wert11/ip.git completed!
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/manyag-25/ip.git...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/manyag-25/ip.git to complete...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Muzhou-exe/ip.git...
+May 05, 2026 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Muzhou-exe/ip.git to complete...
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/siaoarh/ip.git (master) completed!
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/LEDTOMATO/ip.git (master) completed!
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [5/24] Analyzing https://github.com/YeowChunSiang/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [6/24] Analyzing https://github.com/XMOKE2435/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/YeowChunSiang/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/YeowChunSiang/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:04 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/YeowChunSiang/ip.git (master)...
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/XMOKE2435/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:04 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/XMOKE2435/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:05 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/XMOKE2435/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Zanedoesit/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/pinkcar203/ip.git...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/pinkcar203/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Pranav-Pudi/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/manyag-25/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/chucksupasi/ip.git...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/weixuan01/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/chucksupasi/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Dia-R/ip.git...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Muzhou-exe/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Dia-R/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/LingWL02/ip.git...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Pranav-Pudi/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/LingWL02/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Pranav-Pudi/ip.git (master) completed!
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [7/24] Analyzing https://github.com/ashjwley03/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/ashjwley03/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/ashjwley03/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:05 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/ashjwley03/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/YeowChunSiang/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/chucksupasi/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/IV-pratibha-0912/ip.git...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/IV-pratibha-0912/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/XMOKE2435/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Dia-R/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/pinkcar203/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/WEIJIE-01/ip.git...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/YeowChunSiang/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/XMOKE2435/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Yugam2508/ip.git...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/WEIJIE-01/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Yugam2508/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/YeowChunSiang/ip.git (master) completed!
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [8/24] Analyzing https://github.com/jimmy-neu/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/XMOKE2435/ip.git (master) completed!
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [9/24] Analyzing https://github.com/Gogeta2792/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/jimmy-neu/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/jimmy-neu/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Gogeta2792/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:05 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Gogeta2792/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:05 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/jimmy-neu/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/LingWL02/ip.git completed!
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/cheranlee/ip.git...
+May 05, 2026 3:32:05 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Gogeta2792/ip.git (master)...
+May 05, 2026 3:32:05 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/cheranlee/ip.git to complete...
+May 05, 2026 3:32:05 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/PeterShanxin/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/PeterShanxin/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/ashjwley03/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/PeterShanxin/ip.git (master) completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [10/24] Analyzing https://github.com/TEC-wert11/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/IV-pratibha-0912/ip.git completed!
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Astatyr/ip.git...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Astatyr/ip.git to complete...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/TEC-wert11/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/TEC-wert11/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/ashjwley03/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/WEIJIE-01/ip.git completed!
+May 05, 2026 3:32:06 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/TEC-wert11/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/Ianos828/ip.git...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/Ianos828/ip.git to complete...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/ashjwley03/ip.git (master) completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [11/24] Analyzing https://github.com/Zanedoesit/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/cheranlee/ip.git completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Zanedoesit/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Zanedoesit/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:06 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Zanedoesit/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Gogeta2792/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Yugam2508/ip.git completed!
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/TEC-wert11/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/jimmy-neu/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/TEC-wert11/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Gogeta2792/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/TEC-wert11/ip.git (master) completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Gogeta2792/ip.git (master) completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [12/24] Analyzing https://github.com/manyag-25/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [13/24] Analyzing https://github.com/weixuan01/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/jimmy-neu/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/manyag-25/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/manyag-25/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/jimmy-neu/ip.git (master) completed!
+May 05, 2026 3:32:06 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/manyag-25/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [14/24] Analyzing https://github.com/Muzhou-exe/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/weixuan01/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/weixuan01/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:06 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/weixuan01/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Astatyr/ip.git completed!
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Muzhou-exe/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:06 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Muzhou-exe/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:06 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Muzhou-exe/ip.git (master)...
+May 05, 2026 3:32:06 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/Ianos828/ip.git completed!
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Muzhou-exe/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Muzhou-exe/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Muzhou-exe/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [15/24] Analyzing https://github.com/chucksupasi/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/chucksupasi/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/chucksupasi/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/chucksupasi/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Zanedoesit/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Zanedoesit/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/manyag-25/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Zanedoesit/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [16/24] Analyzing https://github.com/pinkcar203/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/manyag-25/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/manyag-25/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [17/24] Analyzing https://github.com/Dia-R/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/pinkcar203/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/pinkcar203/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/pinkcar203/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Dia-R/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Dia-R/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/weixuan01/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Dia-R/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/chucksupasi/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/chucksupasi/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/chucksupasi/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/weixuan01/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [18/24] Analyzing https://github.com/LingWL02/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/weixuan01/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [19/24] Analyzing https://github.com/IV-pratibha-0912/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/LingWL02/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/LingWL02/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/IV-pratibha-0912/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/IV-pratibha-0912/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/IV-pratibha-0912/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/LingWL02/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/pinkcar203/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/pinkcar203/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Dia-R/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/pinkcar203/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [20/24] Analyzing https://github.com/WEIJIE-01/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Dia-R/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/WEIJIE-01/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/WEIJIE-01/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/WEIJIE-01/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Dia-R/ip.git (master) completed!
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [21/24] Analyzing https://github.com/cheranlee/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/cheranlee/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:07 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/cheranlee/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:07 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/cheranlee/ip.git (master)...
+May 05, 2026 3:32:07 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/IV-pratibha-0912/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/IV-pratibha-0912/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/IV-pratibha-0912/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [22/24] Analyzing https://github.com/Yugam2508/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Yugam2508/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Yugam2508/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:08 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Yugam2508/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/LingWL02/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/LingWL02/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/WEIJIE-01/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/LingWL02/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [23/24] Analyzing https://github.com/Astatyr/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Astatyr/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Astatyr/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/WEIJIE-01/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Astatyr/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/WEIJIE-01/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [24/24] Analyzing https://github.com/Ianos828/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Yugam2508/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/cheranlee/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/Ianos828/ip.git (master) does not contain a standalone config file.
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator updateAuthorList
+INFO: https://github.com/Ianos828/ip.git (master) has no authors specified, using all authors by default.
+May 05, 2026 3:32:08 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/Ianos828/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Yugam2508/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Yugam2508/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/cheranlee/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/cheranlee/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Astatyr/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Astatyr/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Astatyr/ip.git (master) completed!
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/Ianos828/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/Ianos828/ip.git (master)...
+May 05, 2026 3:32:08 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/Ianos828/ip.git (master) completed!
+May 05, 2026 3:32:09 AM reposense.report.ReportGenerator generateReposReport
+INFO: The report is generated at /home/runner/work/ip-code-dashboard/ip-code-dashboard/reposense-report/reposense-report
+May 05, 2026 3:32:09 AM reposense.RepoSense main
+INFO: Elapsed processing time: 7.44 second(s)
